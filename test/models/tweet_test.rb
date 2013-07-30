@@ -10,13 +10,13 @@ class TweetTest < ActiveSupport::TestCase
     tweet = Tweet.new(content: "")
     tweet.save
 
-    assert tweet.errors.any?, 'Blank tweet can be created'
+    assert tweet.errors[:content].any?, 'Blank tweet can be created'
   end
 
   test "tweet can't be longer than 140 characters" do
     tweet = Tweet.new(content: "This is a huge line of text because I like to blog instead of tweeting. Tweeting is dumb, seriously... how can one say anything useful in 140 characters?")
     tweet.save
 
-    assert tweet.errors.any?, 'Long tweet can be created'
+    assert tweet.errors[:content].any?, 'Long tweet can be created'
   end
 end
