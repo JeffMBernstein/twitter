@@ -2,4 +2,6 @@
 <h1>Tweet</h1>
 <p><%= @tweet.content %></p>
 
+ <%= image_tag(@tweet.photo_url) if @tweet.photo? %>
+
 <%= link_to 'All Tweets', tweets_path %>

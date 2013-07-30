@@ -6,5 +6,8 @@
     <%= f.label :content, 'Tweet:' %>
     <%= f.text_area :content %>
   </div>
+  <div>
+    Photo: <%= f.file_field :photo %>
+  </div>
   <%= f.submit %>
 <% end %>
