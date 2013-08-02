@@ -36,6 +36,7 @@ gem 'carrierwave'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem 'dynamic_form'
 # Use unicorn as the app server
 # gem 'unicorn'
 
